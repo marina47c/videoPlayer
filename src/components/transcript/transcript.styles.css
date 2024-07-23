@@ -1,0 +1,48 @@
+.transcriptWrapper {
+  border-radius: 6px;
+  padding-left: 9px;
+  padding-right: 4px;
+  background: white;
+}
+
+.transcript {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.highlited {
+  background-color: rgb(213 189 236 / 65%);
+  border-radius: 3px;
+}
+
+.transcriptLine {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 7px;
+  margin-right: 4px;
+}
+
+.time {
+  flex: 0 0 20%;
+}
+
+.text {
+  flex: 1;
+}
+
+.videoContainer {
+  position: relative;
+}
+
+.videoSubtitles {
+  position: absolute;
+  bottom: 14%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}

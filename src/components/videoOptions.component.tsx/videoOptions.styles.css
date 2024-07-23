@@ -1,0 +1,28 @@
+.buttonsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 7px;
+  padding-top: 7px;
+}
+
+button {
+  background-color: rgba(
+    213,
+    189,
+    236,
+    0.85
+  ); /* Light purple with 85% opacity */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(213, 189, 236, 1); /* Fully opaque light purple */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
