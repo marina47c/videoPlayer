@@ -10,19 +10,6 @@
   height: 100%;
 }
 
-.highlited {
-  background-color: rgb(213 189 236 / 65%);
-  border-radius: 3px;
-}
-
-.transcriptLine {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  padding: 7px;
-  margin-right: 4px;
-}
-
 .time {
   flex: 0 0 20%;
 }
