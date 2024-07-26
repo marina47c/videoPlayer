@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 import VideoOptions from "./components/videoOptions/videoOptions.component";
 import VideoPlayer from "./components/videoPlayer/videoPlayer.component";
@@ -10,13 +10,13 @@ import "./App.css";
 function App() {
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [subtitles, setSubtitles] = useState<Subtitles[]>([]);
-
+  const [clipUrl, setClipUrl] = useState<string>("");
   const [currentClipNumber, setCurrentClipNumber] = useState<number>(1);
 
-  const clipResult: string = useMemo(
-    () => getClips(currentClipNumber),
-    [currentClipNumber]
-  );
+  useEffect(() => {
+    const clip = getClips(currentClipNumber);
+    setClipUrl(clip);
+  }, [currentClipNumber]);
 
   useEffect(() => {
     const fetchSubtitles = async () => {
@@ -32,7 +32,7 @@ function App() {
     <div className="app">
       <div className="video">
         <VideoPlayer
-          clipUrl={clipResult}
+          clipUrl={clipUrl}
           updateCurrentTime={setCurrentTime}
           subtitles={subtitles}
         ></VideoPlayer>
