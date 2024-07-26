@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 import VideoOptions from "./components/videoOptions/videoOptions.component";
-import VideoPlayer from "./view/videoPlayer/videoPlayer.component";
-import Transcript from "./view/transcript/transcript.component";
+import VideoPlayer from "./components/videoPlayer/videoPlayer.component";
+import Transcript from "./components/transcript/transcript.component";
 import { Subtitles } from "./utils/types";
 import { getSubtitles, parseSrtText, getClips } from "./utils/util.functions";
 import "./App.css";
